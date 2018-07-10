@@ -1,0 +1,18 @@
+.robot {
+	float:left;
+}
+
+h1{
+	text-align: center;
+	padding-top: 20%;
+}
+h2{
+	text-align: center;
+}
+.volver {
+	text-align: center;
+	padding-top: 70px;
+	padding-left: 22%;
+	color: blue;
+	height: 10px;
+}
