@@ -108,38 +108,7 @@
 			</div>
 		</div>
 	<?php } ?>
-		<!-- Producto #2 -->
-		<div class="col-sm-4 col-md-4 chain-grid">
-			<a href="producto.html"><img class="img-responsive chain" src="images/productos/P005.jpg" alt=" " /></a>
-			<span class="star"></span>
-			<div class="grid-chain-bottom">
-				<h6><a href="producto.html"><?php echo $productos [4] ["Nombre"] ?></a></h6>
-				<div class="star-price">
-					<div class="dolor-grid"> 
-						<span class="actual"><?php echo $productos [4] ["Precio"] ?></span>
-						<span><?php echo $productos [4] ["Stock"] ?> unid.</span>
-					</div>
-					<a class="now-get get-cart" href="producto.html">VER MÁS</a> 
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Producto #3 -->
-		<div class="col-sm-4 col-md-4 chain-grid grid-top-chain">
-			<a href="producto.html"><img class="img-responsive chain" src="images/productos/P006.jpg" alt=" " /></a>
-			<span class="star"></span>
-			<div class="grid-chain-bottom">
-				<h6><a href="producto.html"><?php echo $productos [5] ["Nombre"] ?></a></h6>
-				<div class="star-price">
-					<div class="dolor-grid"> 
-						<span class="actual"><?php echo $productos [5] ["Precio"] ?></span>
-						<span><?php echo $productos [5] ["Stock"] ?> unid.</span>
-					</div>
-					<a class="now-get get-cart" href="producto.html">VER MÁS</a> 
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
+		
 		<div class="clearfix"></div>
 	</div>
 	<div class="clearfix"> </div>
