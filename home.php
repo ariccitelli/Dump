@@ -11,7 +11,7 @@
 	// );
 
 	//combinación de array asociativo dentro de array secuencial
-    $productos = array(
+   /* $productos = array(
         array('idProducto' => '1','Nombre' => 'Apple iPhone 6','Precio' => '499.99','Stock' => '500','Imagen' => 'https://image.ibb.co/j8Xx8T/P001.jpg'),
         array('idProducto' => '2','Nombre' => 'Apple iPad Pro','Precio' => '599.99','Stock' => '300','Imagen' => 'https://image.ibb.co/hMHm2o/P002.jpg'),
         array('idProducto' => '3','Nombre' => 'Google Nexus 7','Precio' => '299.99','Stock' => '300','Imagen' => 'https://image.ibb.co/jQVTF8/P003.jpg'),
@@ -22,11 +22,19 @@
         array('idProducto' => '8','Nombre' => 'HP Mini 110','Precio' => '399.89','Stock' => '400','Imagen' => 'https://image.ibb.co/hK2VTT/sin_foto.jpg')
 
 
-	);
+	);*/
 
-	//print_r( $productos );
+	
 
+	$api = file_get_contents("http://localhost/MercadoTECH/api/?d=productos");
+	$productos = json_decode($api);
 
+	$api = file_get_contents("http://localhost/MercadoTECH/api/?d=ultimos");
+	$ultimos = json_decode($api);
+
+	//print_r($productos);
+	//print_r($ultimos);
+	//die();
 ?>
 
 
@@ -79,15 +87,18 @@
 		<a class="view-all" href="productos.html">VER TODOS<span></span></a>
 	</div>
 	<div class="product-left">
+		<?php 
+			foreach($ultimos as $ultimo){
+		?>
 		<!-- Producto #1 -->
 		<div class="col-sm-4 col-md-4 chain-grid">
-			<a href="producto.html"><img class="img-responsive chain" src="images/productos/P004.jpg" alt=" " /></a>
+			<a href="producto.html"><img class="img-responsive chain" src="<?php echo $ultimo->Imagen?>" alt=" " /></a>
 			<span class="star"></span>
 			<div class="grid-chain-bottom">
-				<h6><a href="producto.html"><?php echo $productos [3] ["Nombre"] ?></a></h6>
+				<h6><a href="producto.html"><?php echo $ultimo->Nombre ?></a></h6>
 				<div class="star-price">
 					<div class="dolor-grid"> 
-						<span class="actual"><?php echo $productos [3] ["Precio"] ?></span>
+						<span class="actual"><?php echo $ultimo->Precio ?></span>
 						<span><?php echo $productos [3] ["Stock"] ?> unid.</span>
 
 					</div>
@@ -96,6 +107,7 @@
 				</div>
 			</div>
 		</div>
+	<?php } ?>
 		<!-- Producto #2 -->
 		<div class="col-sm-4 col-md-4 chain-grid">
 			<a href="producto.html"><img class="img-responsive chain" src="images/productos/P005.jpg" alt=" " /></a>
