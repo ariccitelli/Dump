@@ -9,7 +9,7 @@
 
 
 
-	    $productos = array(
+	    /*$productos = array(
         array('idProducto' => '1','Nombre' => 'Apple iPhone 6','Precio' => '499.99','Stock' => '500','Imagen' => 'https://image.ibb.co/j8Xx8T/P001.jpg'),
         array('idProducto' => '2','Nombre' => 'Apple iPad Pro','Precio' => '599.99','Stock' => '300','Imagen' => 'https://image.ibb.co/hMHm2o/P002.jpg'),
         array('idProducto' => '3','Nombre' => 'Google Nexus 7','Precio' => '299.99','Stock' => '300','Imagen' => 'https://image.ibb.co/jQVTF8/P003.jpg'),
@@ -19,7 +19,7 @@
         array('idProducto' => '7','Nombre' => 'Apple Watch','Precio' => '199.69','Stock' => '350','Imagen' => 'https://image.ibb.co/mHT4oT/P007.jpg'),
         array('idProducto' => '8','Nombre' => 'HP Mini 110','Precio' => '399.89','Stock' => '400','Imagen' => 'https://image.ibb.co/hK2VTT/sin_foto.jpg')
 
-	);
+	);*/
 	//obtengo la posición del item cuyo idProducto es igual al id enviado por GET :)
 	$item = array_search($id, array_column($productos, "idProducto") );
 
@@ -39,7 +39,7 @@
 		<div class="grid images_3_of_2">
 			<ul id="etalage">
 				<li>
-					<img class="etalage_thumb_image" src="<?php echo $elegido ["Imagen"]?>" class="img-responsive" />
+					<img class="etalage_thumb_image" src="<?php echo $elegido ["Imagen"] ?>" class="img-responsive" />
 				</li>
 			</ul>
 			<div class="clearfix"></div>		

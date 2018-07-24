@@ -1,0 +1,18 @@
+CREATE DATABASE mercado_tech DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+--DROP DATABASE mercado_tech
+
+CREATE TABLE `productos` (
+	`id_producto` INT (10) NOT NULL AUTO_INCREMENT,
+	`Nombre` VARCHAR (30) NOT NULL,
+	`Precio` DECIMAL (6,2) NOT NULL,
+	`Marca` VARCHAR (20) NOT NULL,
+	`Categoria` INT (10) NOT NULL,
+	`Descripcion` TEXT NOT NULL,
+	`Stock` INT (6) NULL DEFAULT 0,
+	PRIMARY KEY (`id_producto`),
+	KEY (`Categoria`)
+);
+
+ALTER TABLE `productos` CHANGE `Marca` `Marca` INT (10) NOT NULL;
+ALTER TABLE `productos` ADD KEY (`Marca`)
+ALTER TABLE `productos` ADD `Imagen` TINYTEXT NOT NULL AFTER `Descripcion`
