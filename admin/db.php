@@ -51,10 +51,10 @@
 
 		if ( $actualizar->execute() ) {
 			//echo "Producto actualizado correctamente!";
-			return(true);
+			return true;
 		} else {
 			//echo "Ocurrio un error :(";
-			return(false);
+			return false;
 		}
 	}
 
@@ -65,9 +65,11 @@
 		$borrar->bindParam(":id", $id, PDO::PARAM_INT);
 
 		if ( $borrar->execute() ) {
-			echo "Producto borrado correctamente!";
+			//echo "Producto borrado correctamente!";
+			return true;
 		} else {
-			echo "Ocurrio un error :(";
+			//echo "Ocurrio un error :(";
+			return false;
 		}
 	}
 
